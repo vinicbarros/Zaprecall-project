@@ -1,6 +1,12 @@
+import React from "react";
 import Question from "./Question";
+import Footer from "./Footer";
+import logo from '../assets/img/logo.png';
 
 export default function FlashScreen() {
+
+  const [answerZap, setAnswerZap] = React.useState([]);
+
   const questions = [
     {
       question: "O que é JSX?",
@@ -41,7 +47,7 @@ export default function FlashScreen() {
   return (
     <section className="screenTwo">
       <header>
-        <img src="/assets/img/logo.png" alt="ZapRecall logo" />
+        <img src={logo} alt="ZapRecall logo" />
         <h1>ZapRecall</h1>
       </header>
       <section className="questions">
@@ -50,12 +56,16 @@ export default function FlashScreen() {
           .slice(4)
           .map((question, index) => (
             <Question
-              QuestionNumber={index}
-              Question={question.question}
-              Answer={question.answer}
+              key={index}
+              questionNumber={index}
+              question={question.question}
+              answer={question.answer}
+              setAnswered={setAnswerZap}
+              answerZap={answerZap}
             />
           ))}
       </section>
+      <Footer answerZap={answerZap} answerNumber={answerZap.length}/>
     </section>
   );
 }
