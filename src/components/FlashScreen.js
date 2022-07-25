@@ -4,12 +4,13 @@ import Footer from "./Footer";
 import logo from "../assets/img/logo.png";
 
 export default function FlashScreen({deckState}) {
-  const [answerZap, setAnswerZap] = useState([])
+  const [answerZap, setAnswerZap] = useState([]);
   
   function mix() {
-    return 0.5 - Math.random();
+    if (answerZap.length === 0) {
+      return 0.5 - Math.random();
+    }
   }
-
   return (
     <section className="screenTwo">
       <header>
