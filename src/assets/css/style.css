@@ -47,6 +47,22 @@ h1 {
   color: #d70900;
 }
 
+.screenOne select {
+  margin-top: 10px;
+  width: 246px;
+  height: 43px;
+  border: none;
+  border-radius: 5px;
+  color: #ADADAD;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.screenOne select option {
+  color: #333333 !important;
+}
+
 .screenTwo {
   width: 100vw;
   height: 100vh;
@@ -117,6 +133,12 @@ h1 {
   align-items: normal;
 }
 
+.screenTwo .questions .question.showed img {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+}
+
 .screenTwo .questions .question.showed div {
   position: relative;
   align-items: normal;
@@ -130,12 +152,6 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-}
-
-.screenTwo .questions .question.showed ion-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 .screenTwo .questions .question.answer {
@@ -276,4 +292,18 @@ footer .message img {
 footer .message p {
   font-weight: 400;
   text-align: center;
+}
+
+footer button {
+  width: 167px;
+  height: 32px;
+  background-color: #fb6b6b;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Recursive";
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
