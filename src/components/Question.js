@@ -1,4 +1,5 @@
 import React from "react";
+import setinha from '../assets/img/setinha.png';
 
 export default function Question({ 
   questionNumber,
@@ -31,7 +32,7 @@ export default function Question({
                 }}
               >
                 <p>{question}</p>
-                <ion-icon name="return-down-back-outline"></ion-icon>
+                <img src={setinha} alt="seta" />
               </div>
             );
           case "answer":

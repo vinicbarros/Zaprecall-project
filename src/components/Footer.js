@@ -38,6 +38,7 @@ export default function Footer({ answerZap, answerNumber }) {
           }
         })}
       </div>
+        {answerNumber === 4 && <button onClick={() => {window.location.reload()}}>REINICIAR RECALL</button>}
     </footer>
   );
 }
